@@ -1,0 +1,120 @@
+/* Entire screen */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to right,#ff9966, #ef6063);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  padding: 2rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.box,
+.weather-card {
+  color: #222; 
+}
+
+.weather-card h2,
+.weather-card p,
+.input-box h1 {
+  color: #222; 
+}
+
+
+/* Flex layout for two boxes */
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Shared box styling */
+.box {
+  flex: 1;
+  min-width: 300px;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Input box only */
+.input-box {
+  text-align: center;
+}
+
+/* Dropdown area */
+.dropdown-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  min-width: 160px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+/* Error message */
+.error {
+  color: red;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* WeatherCard styling */
+.weather-card {
+  text-align: left;
+}
+
+.weather-card h2 {
+  margin-bottom: 10px;
+}
+
+.weather-card p {
+  margin: 8px 0;
+}
+
+/* Placeholder if no data */
+.placeholder {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
